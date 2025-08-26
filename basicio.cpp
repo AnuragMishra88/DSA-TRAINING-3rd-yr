@@ -54,12 +54,25 @@ using namespace std;
 
 //! (6) 
 
+// int main(){
+//     int n,y;
+//     cin>>n>>y;
+//     int ans=n*y;
+//     if((int)(log10(ans)+1)==5){
+//         cout<<"Valid";
+//     }
+//     else{
+//         cout<<"NO";
+//     }
+// }
+
+//! (7)
+
 int main(){
-    int n,y;
-    cin>>n>>y;
-    int ans=n*y;
-    if((int)(log10(ans)+1)==5){
-        cout<<"Valid";
+    string s;
+    cin>>s;
+    if(s.size()%2==0){
+        cout<<"YES";
     }
     else{
         cout<<"NO";
