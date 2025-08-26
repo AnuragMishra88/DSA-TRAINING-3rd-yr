@@ -31,8 +31,37 @@ using namespace std;
 
 //! (4) WAP to read 3 integer and multiply it
 
+// int main(){
+//     int a,b,c;
+//     cin>>a>>b>>c;
+//     cout<<a*b*c;
+// }
+
+//! (5) WAP to read three space separated integers and calculate average of first 2 integers and check whether this average is greater than 3rd integer,if it is true print yes otehrwise NO
+
+
+// int main(){
+//     int a,b,c;
+//     cin>>a>>b>>c;
+//     float avg=(a+b)/2.0;
+//     if(avg>c){
+//         cout<<"YES"<<endl;
+//     }
+//     else{
+//         cout<<"NO"<<endl;
+//     }
+// }
+
+//! (6) 
+
 int main(){
-    int a,b,c;
-    cin>>a>>b>>c;
-    cout<<a*b*c;
+    int n,y;
+    cin>>n>>y;
+    int ans=n*y;
+    if((int)(log10(ans)+1)==5){
+        cout<<"Valid";
+    }
+    else{
+        cout<<"NO";
+    }
 }
