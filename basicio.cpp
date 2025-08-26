@@ -71,10 +71,13 @@ using namespace std;
 int main(){
     string s;
     cin>>s;
-    if(s.size()%2==0){
+    int res=s.find("&");
+    int res2=s.find("#");
+    if(s.size()%2==0 && res!=string:: npos && res2!= string:: npos){
         cout<<"YES";
     }
     else{
         cout<<"NO";
     }
 }
+
