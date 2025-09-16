@@ -343,3 +343,108 @@ int main() {
 
 }
 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,m;
+    cin>>n>>m;
+    vector<vector<int>>mat(n,vector<int>(m));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>mat[i][j];
+        }
+    }
+    for(auto it:mat){
+        cout<<accumulate(it.begin(),it.end(),0)<<" "<<*max_element(it.begin(),it.end())<<" "<<*min_element(it.begin(),it.end());
+        cout<<endl;
+    }
+
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,m;
+    cin>>n>>m;
+    vector<vector<int>>mat(n,vector<int>(m));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>mat[i][j];
+        }
+    }
+    for(int i=1;i<n-2;i++){
+        for(int j=1;j<m-2;j++){
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
+}
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,m,k;
+    cin>>n>>m>>k;
+    vector<vector<int>>mat(n,vector<int>(m));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>mat[i][j];
+        }
+    }
+    for(int i=m-1;i>(m-k-1);i--){
+        for(int j=0;j<k;j++){
+            swap(mat[0][i],mat[n-1][j]);
+        }
+    }
+    
+    for(int i=m-1;i>(m-k-1);i--){
+        for(int j=0;j<k;j++){
+            swap(mat[1][i],mat[n-2][j]);
+        }
+    }
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+    
+
+}
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,m;
+    cin>>n>>m;
+    vector<vector<int>>mat(n,vector<int>(m));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cin>>mat[i][j];
+        }
+    }
+    
+    
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<m-1;j++){
+            swap(mat[i][j],mat[i+1][j+1]);
+        }
+    }
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+    
+
+}
+
