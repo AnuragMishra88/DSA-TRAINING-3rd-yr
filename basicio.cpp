@@ -448,3 +448,33 @@ int main() {
 
 }
 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	string s1,s2;
+	int n;
+	getline(cin,s1);
+	cin>>s2;
+	cin>>n;
+	string ans;
+
+	int cnt=0;
+	for(int i=0;i<s1.size();i++){
+	    if(cnt==n){
+	        ans+=s2;
+	        cnt=0;
+	        i--;
+	    }
+	    else{
+	        ans+=s1[i];
+	        cnt++;
+	    }
+	}
+	cout<<ans<<endl;
+	
+
+}
+
+
